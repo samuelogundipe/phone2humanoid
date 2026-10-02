@@ -1,0 +1,11 @@
+# raw, unblurred videos never leave this machine
+data/*
+!data/README.md
+
+# generated or downloaded
+outputs/
+models/
+third_party/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

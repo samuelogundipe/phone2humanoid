@@ -1,0 +1,7 @@
+# tested with: numpy 2.5.3, opencv 5.0.0, mujoco 3.14.0, mediapipe 1.0.1, matplotlib 3.11.2, pandas 3.0.6 (Python 3.12)
+mediapipe==1.0.1
+mujoco>=3.3
+opencv-python-headless
+numpy
+matplotlib
+pandas
