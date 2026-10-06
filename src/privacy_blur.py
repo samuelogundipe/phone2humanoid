@@ -1,8 +1,11 @@
-"""Keep the athlete sharp and blur everyone and everything else.
+"""Keep the athlete's body sharp and blur everyone and everything else,
+including the athlete's face.
 
 The pose landmarker returns a segmentation mask for the tracked person. With
 num_poses=1 that is the athlete only, so bystanders end up in the blurred
-background. Also saves 2D image landmarks for drawing skeleton overlays.
+background. The athlete's head (found from the face landmarks) is blurred too,
+so no face appears in any shared video. Also saves 2D image landmarks for
+drawing skeleton overlays.
 """
 import cv2
 import numpy as np
@@ -14,6 +17,19 @@ from paths import CLIPS, MODEL, OUT
 
 SKELETON = [(11, 12), (11, 13), (13, 15), (12, 14), (14, 16), (11, 23), (12, 24),
             (23, 24), (23, 25), (25, 27), (27, 31), (24, 26), (26, 28), (28, 32)]
+FACE = list(range(11))  # nose, eyes, ears, mouth
+
+
+def blur_head(frame, face_pts, blur=99):
+    """Blur a generous box around the face landmarks (pixel coordinates)."""
+    c = face_pts.mean(0)
+    r = max(50.0, 1.8 * float(np.max(np.linalg.norm(face_pts - c, axis=1))))
+    h, w = frame.shape[:2]
+    x0, x1 = int(max(c[0] - r, 0)), int(min(c[0] + r, w))
+    y0, y1 = int(max(c[1] - 1.3 * r, 0)), int(min(c[1] + 1.1 * r, h))
+    if x1 > x0 and y1 > y0:
+        frame[y0:y1, x0:x1] = cv2.GaussianBlur(frame[y0:y1, x0:x1], (blur, blur), 0)
+    return frame
 
 
 def privacy_video(label, height=960, blur=61):
@@ -41,6 +57,7 @@ def privacy_video(label, height=960, blur=61):
                 alpha = cv2.GaussianBlur(mask.astype(np.float32), (31, 31), 0)[..., None]
                 out = (frame * alpha + blurred * (1 - alpha)).astype(np.uint8)
                 image_lm.append([[p.x * w, p.y * h] for p in res.pose_landmarks[0]])
+                out = blur_head(out, np.array(image_lm[-1])[FACE])
             else:
                 out = blurred  # nobody detected: blur the whole frame
                 image_lm.append(np.full((33, 2), np.nan).tolist())

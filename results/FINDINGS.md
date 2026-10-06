@@ -30,7 +30,7 @@ The squat is **kinematically possible but dynamically unstable** for the G1 when
 - One athlete (me), one movement and one camera angle so far. The front-view clip reads squat depth about 14° deeper than the 45° clip, and standing knees look bent from the front, so camera placement matters.
 - Angles are zeroed at my standing posture, because the single camera reads a straight standing knee as about 18° bent.
 - Arms copy shoulder and elbow angles, not hand positions. The G1's long arms relative to its torso put its hands higher than mine.
-- The menagerie G1 has unlimited actuator torque and untuned PD gains. A real G1 would find this harder, not easier.
+- The Menagerie G1 enforces Unitree's joint torque limits (139 N·m at the knee, 50 N·m at the ankle; in the balance run the waist and right shoulder joints reach theirs). Its PD gains are untuned and the ankle balance rule reads the true centre of mass, which a real G1 would have to estimate. A real G1 would find this harder, not easier.
 - The two clips were separate sets, so the front-vs-45° comparison mixes camera effect with set-to-set variation.
 
 ## Next

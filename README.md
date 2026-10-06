@@ -4,7 +4,7 @@ Can a humanoid robot copy an athlete from ordinary phone video? This project fil
 
 ![You, the G1 copying joint angles only, and the G1 with ankle balance, 3 seconds into a squat](results/figures/hero_physics_compare.jpg)
 
-*Bodyweight squat, 3 s in. Middle: the G1 driven only by my joint angles has already fallen. Right: the same targets plus a simple ankle balance rule, still squatting. Everyone but the athlete is blurred.*
+*Bodyweight squat, 3 s in. Middle: the G1 driven only by my joint angles has already fallen. Right: the same targets plus a simple ankle balance rule, still squatting. Bystanders and the athlete's face are blurred.*
 
 ## First result: the squat
 
@@ -28,7 +28,7 @@ Videos: [physics comparison](media/squat_G1_physics_compare.mp4) · [pose replay
 2. **Angles and reps.** Knee, hip and trunk lean are computed, smoothed and split into reps. Reps are compared with DTW, the method from my B.Sc. thesis on remote physiotherapy monitoring.
 3. **Retargeting.** The angles drive a Unitree G1 (MuJoCo Menagerie model, 29 joints). Each joint's sign convention was measured on the model (`src/g1_probe.py`). The ankle is solved so both feet stay flat, and the body is shifted so the feet stay planted.
 4. **Physics.** The G1's position actuators track those targets under gravity and contact, with and without an ankle balance rule.
-5. **Privacy.** A person segmentation mask keeps the athlete sharp and blurs everyone else in every shared video.
+5. **Privacy.** In every shared video a person segmentation mask blurs everyone except the athlete, and the athlete's face is blurred as well.
 
 ## Run it
 
@@ -49,7 +49,7 @@ Results land in `outputs/`. To run the first half (pose, angles, reps, DTW, and 
 run_all.py              one command, whole pipeline
 setup_assets.py         downloads the pose model and the G1 model
 src/p2h.py              pose -> angles -> reps -> DTW
-src/privacy_blur.py     blur everyone except the athlete; skeleton overlay
+src/privacy_blur.py     blur bystanders and the athlete's face; skeleton overlay
 src/g1_probe.py         measures the G1's joint sign conventions
 src/g1_retarget.py      human angles -> G1 joints; kinematic replay video
 src/g1_physics.py       physics experiments and the three-panel video
@@ -63,7 +63,7 @@ media/                  blurred result videos
 - So far: one athlete, one movement, one camera angle. A front-on view reads the squat about 14° deeper, and it reads straight standing knees as bent, so camera placement matters.
 - Angles are zeroed at the athlete's standing posture, because one camera reads a straight knee as about 18° bent.
 - Arms copy shoulder and elbow angles, not hand positions. The G1's long arms relative to its torso put its hands higher than the athlete's.
-- The Menagerie G1 has unlimited actuator torque and untuned PD gains, so a real robot would find this harder.
+- The Menagerie G1 enforces Unitree's joint torque limits (139 N·m at the knee, 50 N·m at the ankle), but its PD gains are untuned and the ankle balance rule reads the true centre of mass, which a real robot would have to estimate. A real G1 would find this harder.
 
 ## Next
 
