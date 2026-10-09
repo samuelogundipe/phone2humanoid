@@ -1,0 +1,532 @@
+{
+ "clips": [
+  {
+   "clip": "squat_S",
+   "drill": "Squat",
+   "athlete": "S",
+   "seconds": 17.3,
+   "camera_deg_from_front": 38.0,
+   "reps": 9,
+   "rep_gap_deg": 7.1,
+   "cannot_copy": "nothing: fits all joint limits",
+   "copy_only": "falls at 1.1 s",
+   "with_ankle_balance": "stays up",
+   "robot_arms_with_balance": "falls at 12.8 s",
+   "held_in_air_median_tracking_deg": 0.03,
+   "held_in_air_torque_limit": {},
+   "kinematic": {
+    "arm_l": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 4.9,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 4.7,
+     "jumps_over_30deg": 0
+    },
+    "arm_r": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 10.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 8.5,
+     "jumps_over_30deg": 0
+    },
+    "leg_l": {
+     "max_dir_error_deg": 0.7,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 12.0,
+     "jumps_over_30deg": 0
+    },
+    "leg_r": {
+     "max_dir_error_deg": 0.9,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 12.0,
+     "jumps_over_30deg": 0
+    },
+    "planted_foot_max_tilt_deg": 0.0,
+    "second_planted_foot_height_cm": {
+     "min": -0.0,
+     "max": 0.0
+    },
+    "second_foot_fix_deg": {
+     "median": 0.0,
+     "max": 0.0
+    },
+    "com_margin_cm": {
+     "min": -0.6,
+     "median": 5.8,
+     "share_frames_outside_feet": 0.01
+    },
+    "single_leg_share": 0.0
+   }
+  },
+  {
+   "clip": "armraise_front_A",
+   "drill": "Arm raise",
+   "athlete": "A",
+   "seconds": 21.7,
+   "camera_deg_from_front": 46.0,
+   "reps": 9,
+   "rep_gap_deg": 5.7,
+   "cannot_copy": "arm direction off by up to 14 deg",
+   "copy_only": "falls at 1.8 s",
+   "with_ankle_balance": "stays up",
+   "robot_arms_with_balance": null,
+   "held_in_air_median_tracking_deg": 0.05,
+   "held_in_air_torque_limit": {
+    "left_shoulder_yaw": 0.025
+   },
+   "kinematic": {
+    "arm_l": {
+     "max_dir_error_deg": 14.3,
+     "share_frames_over_10deg": 0.065,
+     "max_lower_segment_error_deg": 18.1,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 25.5,
+     "jumps_over_30deg": 0
+    },
+    "arm_r": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 15.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 19.6,
+     "jumps_over_30deg": 0
+    },
+    "leg_l": {
+     "max_dir_error_deg": 0.7,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 3.0,
+     "jumps_over_30deg": 0
+    },
+    "leg_r": {
+     "max_dir_error_deg": 0.9,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 4.5,
+     "jumps_over_30deg": 0
+    },
+    "planted_foot_max_tilt_deg": 0.0,
+    "second_planted_foot_height_cm": {
+     "min": -0.0,
+     "max": 0.0
+    },
+    "second_foot_fix_deg": {
+     "median": 0.0,
+     "max": 0.0
+    },
+    "com_margin_cm": {
+     "min": 0.2,
+     "median": 6.2,
+     "share_frames_outside_feet": 0.0
+    },
+    "single_leg_share": 0.0
+   }
+  },
+  {
+   "clip": "armraise_side_A",
+   "drill": "Arm raise",
+   "athlete": "A",
+   "seconds": 16.8,
+   "camera_deg_from_front": 40.0,
+   "reps": 9,
+   "rep_gap_deg": 2.5,
+   "cannot_copy": "shoulder has to swap configuration 35 times (up to 111 deg in one frame); arm direction off by up to 21 deg",
+   "copy_only": "falls at 3.1 s",
+   "with_ankle_balance": "stays up",
+   "robot_arms_with_balance": null,
+   "held_in_air_median_tracking_deg": 0.05,
+   "held_in_air_torque_limit": {
+    "right_shoulder_yaw": 0.021
+   },
+   "kinematic": {
+    "arm_l": {
+     "max_dir_error_deg": 21.3,
+     "share_frames_over_10deg": 0.087,
+     "max_lower_segment_error_deg": 18.6,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 101.2,
+     "jumps_over_30deg": 31
+    },
+    "arm_r": {
+     "max_dir_error_deg": 4.1,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 16.7,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 111.2,
+     "jumps_over_30deg": 4
+    },
+    "leg_l": {
+     "max_dir_error_deg": 0.7,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 3.0,
+     "jumps_over_30deg": 0
+    },
+    "leg_r": {
+     "max_dir_error_deg": 0.9,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 3.0,
+     "jumps_over_30deg": 0
+    },
+    "planted_foot_max_tilt_deg": 0.0,
+    "second_planted_foot_height_cm": {
+     "min": -0.0,
+     "max": 0.0
+    },
+    "second_foot_fix_deg": {
+     "median": 0.0,
+     "max": 0.0
+    },
+    "com_margin_cm": {
+     "min": 0.6,
+     "median": 4.0,
+     "share_frames_outside_feet": 0.0
+    },
+    "single_leg_share": 0.0
+   }
+  },
+  {
+   "clip": "armraise_B",
+   "drill": "Arm raise",
+   "athlete": "B",
+   "seconds": 40.5,
+   "camera_deg_from_front": 42.0,
+   "reps": 13,
+   "rep_gap_deg": 20.9,
+   "cannot_copy": "shoulder has to swap configuration 44 times (up to 330 deg in one frame); centre of mass outside the feet in 13% of frames",
+   "copy_only": "falls at 1.5 s",
+   "with_ankle_balance": "falls at 3.3 s",
+   "robot_arms_with_balance": null,
+   "held_in_air_median_tracking_deg": 0.07,
+   "held_in_air_torque_limit": {
+    "left_shoulder_roll": 0.101,
+    "left_shoulder_pitch": 0.084,
+    "left_wrist_pitch": 0.052,
+    "left_shoulder_yaw": 0.031
+   },
+   "kinematic": {
+    "arm_l": {
+     "max_dir_error_deg": 9.4,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 19.3,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 330.1,
+     "jumps_over_30deg": 31
+    },
+    "arm_r": {
+     "max_dir_error_deg": 3.6,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 20.7,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 166.7,
+     "jumps_over_30deg": 13
+    },
+    "leg_l": {
+     "max_dir_error_deg": 0.7,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 3.0,
+     "jumps_over_30deg": 0
+    },
+    "leg_r": {
+     "max_dir_error_deg": 0.9,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 3.0,
+     "jumps_over_30deg": 0
+    },
+    "planted_foot_max_tilt_deg": 0.0,
+    "second_planted_foot_height_cm": {
+     "min": -0.0,
+     "max": 0.0
+    },
+    "second_foot_fix_deg": {
+     "median": 0.0,
+     "max": 0.0
+    },
+    "com_margin_cm": {
+     "min": -4.0,
+     "median": 3.5,
+     "share_frames_outside_feet": 0.127
+    },
+    "single_leg_share": 0.0
+   }
+  },
+  {
+   "clip": "lunge_A",
+   "drill": "Forward lunge",
+   "athlete": "A",
+   "seconds": 48.2,
+   "camera_deg_from_front": 47.0,
+   "reps": 16,
+   "rep_gap_deg": 6.5,
+   "cannot_copy": "shoulder has to swap configuration 7 times (up to 61 deg in one frame); a planted foot cannot stay flat (tilts up to 31 deg); leg angles nudged up to 34 deg to keep both feet down; centre of mass outside the feet in 5% of frames",
+   "copy_only": "falls at 3.1 s",
+   "with_ankle_balance": "falls at 3.9 s",
+   "robot_arms_with_balance": "falls at 1.8 s",
+   "held_in_air_median_tracking_deg": 0.03,
+   "held_in_air_torque_limit": {},
+   "kinematic": {
+    "arm_l": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 21.8,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 61.2,
+     "jumps_over_30deg": 7
+    },
+    "arm_r": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 7.1,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 6.2,
+     "jumps_over_30deg": 0
+    },
+    "leg_l": {
+     "max_dir_error_deg": 0.7,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 6.0,
+     "jumps_over_30deg": 0
+    },
+    "leg_r": {
+     "max_dir_error_deg": 0.9,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 6.0,
+     "jumps_over_30deg": 0
+    },
+    "planted_foot_max_tilt_deg": 31.0,
+    "second_planted_foot_height_cm": {
+     "min": -16.8,
+     "max": 2.9
+    },
+    "second_foot_fix_deg": {
+     "median": 7.1,
+     "max": 33.8
+    },
+    "com_margin_cm": {
+     "min": -27.4,
+     "median": 4.1,
+     "share_frames_outside_feet": 0.05
+    },
+    "single_leg_share": 0.046
+   }
+  },
+  {
+   "clip": "lunge_B",
+   "drill": "Forward lunge",
+   "athlete": "B",
+   "seconds": 24.6,
+   "camera_deg_from_front": 33.0,
+   "reps": 9,
+   "rep_gap_deg": 7.4,
+   "cannot_copy": "a planted foot cannot stay flat (tilts up to 48 deg); leg angles nudged up to 16 deg to keep both feet down; on one foot 5% of the time; centre of mass outside the feet in 5% of frames",
+   "copy_only": "falls at 2.1 s",
+   "with_ankle_balance": "falls at 2.6 s",
+   "robot_arms_with_balance": "falls at 2.6 s",
+   "held_in_air_median_tracking_deg": 0.03,
+   "held_in_air_torque_limit": {},
+   "kinematic": {
+    "arm_l": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 21.3,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 6.7,
+     "jumps_over_30deg": 0
+    },
+    "arm_r": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 14.3,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 5.4,
+     "jumps_over_30deg": 0
+    },
+    "leg_l": {
+     "max_dir_error_deg": 0.7,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 4.5,
+     "jumps_over_30deg": 0
+    },
+    "leg_r": {
+     "max_dir_error_deg": 0.9,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 6.0,
+     "jumps_over_30deg": 0
+    },
+    "planted_foot_max_tilt_deg": 47.8,
+    "second_planted_foot_height_cm": {
+     "min": -11.8,
+     "max": 8.0
+    },
+    "second_foot_fix_deg": {
+     "median": 4.3,
+     "max": 15.8
+    },
+    "com_margin_cm": {
+     "min": -21.6,
+     "median": 4.1,
+     "share_frames_outside_feet": 0.054
+    },
+    "single_leg_share": 0.054
+   }
+  },
+  {
+   "clip": "kick_A2",
+   "drill": "Kick",
+   "athlete": "A",
+   "seconds": 35.1,
+   "camera_deg_from_front": 44.0,
+   "reps": 15,
+   "rep_gap_deg": 7.3,
+   "cannot_copy": "a planted foot cannot stay flat (tilts up to 30 deg); leg angles nudged up to 29 deg to keep both feet down; on one foot 59% of the time; centre of mass outside the feet in 59% of frames",
+   "copy_only": "falls at 1.5 s",
+   "with_ankle_balance": "falls at 1.8 s",
+   "robot_arms_with_balance": "falls at 1.8 s",
+   "held_in_air_median_tracking_deg": 0.08,
+   "held_in_air_torque_limit": {},
+   "kinematic": {
+    "arm_l": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 21.7,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 13.8,
+     "jumps_over_30deg": 0
+    },
+    "arm_r": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 21.5,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 9.5,
+     "jumps_over_30deg": 0
+    },
+    "leg_l": {
+     "max_dir_error_deg": 0.7,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 10.5,
+     "jumps_over_30deg": 0
+    },
+    "leg_r": {
+     "max_dir_error_deg": 0.9,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 12.0,
+     "jumps_over_30deg": 0
+    },
+    "planted_foot_max_tilt_deg": 29.7,
+    "second_planted_foot_height_cm": {
+     "min": -7.6,
+     "max": 20.8
+    },
+    "second_foot_fix_deg": {
+     "median": 0.0,
+     "max": 29.2
+    },
+    "com_margin_cm": {
+     "min": -19.0,
+     "median": -8.4,
+     "share_frames_outside_feet": 0.591
+    },
+    "single_leg_share": 0.59
+   }
+  },
+  {
+   "clip": "kick_B",
+   "drill": "Kick",
+   "athlete": "B",
+   "seconds": 21.4,
+   "camera_deg_from_front": 41.0,
+   "reps": 9,
+   "rep_gap_deg": 6.2,
+   "cannot_copy": "leg angles nudged up to 40 deg to keep both feet down; on one foot 61% of the time; centre of mass outside the feet in 67% of frames",
+   "copy_only": "falls at 1.1 s",
+   "with_ankle_balance": "falls at 1.6 s",
+   "robot_arms_with_balance": "falls at 1.8 s",
+   "held_in_air_median_tracking_deg": 0.06,
+   "held_in_air_torque_limit": {},
+   "kinematic": {
+    "arm_l": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 21.2,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 4.2,
+     "jumps_over_30deg": 0
+    },
+    "arm_r": {
+     "max_dir_error_deg": 1.0,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 19.7,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 4.2,
+     "jumps_over_30deg": 0
+    },
+    "leg_l": {
+     "max_dir_error_deg": 0.7,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 9.0,
+     "jumps_over_30deg": 0
+    },
+    "leg_r": {
+     "max_dir_error_deg": 0.9,
+     "share_frames_over_10deg": 0.0,
+     "max_lower_segment_error_deg": 0.0,
+     "max_bend_clipped_deg": 0.0,
+     "max_joint_jump_per_frame_deg": 12.0,
+     "jumps_over_30deg": 0
+    },
+    "planted_foot_max_tilt_deg": 0.0,
+    "second_planted_foot_height_cm": {
+     "min": -9.4,
+     "max": 3.9
+    },
+    "second_foot_fix_deg": {
+     "median": 0.0,
+     "max": 39.5
+    },
+    "com_margin_cm": {
+     "min": -18.2,
+     "median": -9.1,
+     "share_frames_outside_feet": 0.672
+    },
+    "single_leg_share": 0.612
+   }
+  }
+ ],
+ "athlete_A_vs_B_gap_deg": {
+  "lunge": 13.5,
+  "kick": 8.0
+ },
+ "excluded": {
+  "kick_A1": "filmed almost front-on (13 deg), outside the 45 deg protocol; one kick only"
+ }
+}
